@@ -10,3 +10,9 @@ Report button shown when text is selected
 Keyboard shortcuts to show and close the report box
 Report box with text input to describe issues
 Screenshot functionality for the current web page view
+
+## 3waysToTakeScreenShot
+1. This task allows users to capture a screenshot of the web page by using a keyboard shortcut. The screenshot button will appear at the top middle of the screen when a keyboard shortcut is pressed. 
+2. Users can select the text on web and will show a screenshot button
+3. There is a floating screenshot button at the right down corner of the web.
+Users can do the screenshot by this three easy way

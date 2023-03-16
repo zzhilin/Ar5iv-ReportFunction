@@ -1,5 +1,6 @@
 # Ar5iv-ReportFunction
 This whole Repo is used to test and build the function for develop the ArXiv Website.
+Some parts of code have asked ChatGPT for help.
 
 ## 3in1 -> Report Box Function
 This project provides a front-end solution to create a report box with a text input and a screenshot feature. The report box can be triggered in three different ways: by clicking a floating "?" button, by selecting text on the web page, or by pressing a specific key.

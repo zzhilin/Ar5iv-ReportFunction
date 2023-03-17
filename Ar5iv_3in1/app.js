@@ -189,20 +189,28 @@ document.addEventListener("DOMContentLoaded", () => {
     //   img.remove();
     // }, 100);
   }
-  // function submitScreenshot() {
-  //   // Capture the screenshot as a base64 encoded image
-  //   html2canvas(document.querySelector(".content")).then(function (canvas) {
-  //     const base64Screenshot = canvas.toDataURL();
+  // add highlight
+  function highlightSelection() {
+    // Get the current selection
+    const selection = window.getSelection();
+    if (selection.rangeCount === 0 || selection.isCollapsed) {
+      return;
+    }
 
-  //     // Set the value of the hidden input field
-  //     document.getElementById("screenshot-data").value = base64Screenshot;
+    // Get the range of the selection
+    const range = selection.getRangeAt(0);
 
-  //     // Submit the form
-  //     document.getElementById("upload-form").submit();
-  //   });
-  // }
+    // Create a new element to wrap around the selected content
+    const highlightSpan = document.createElement("span");
+    highlightSpan.classList.add("highlight");
 
-  // const takeScreenshotBtn = document.querySelector(".take-screenshot");
-  // takeScreenshotBtn.removeEventListener("click", takeScreenshot);
-  // takeScreenshotBtn.addEventListener("click", submitScreenshot);
+    // Wrap the selected content with the new element
+    range.surroundContents(highlightSpan);
+
+    // Clear the selection
+    selection.removeAllRanges();
+  }
+
+  // Attach the event listener to the document
+  document.addEventListener("mouseup", highlightSelection);
 });
